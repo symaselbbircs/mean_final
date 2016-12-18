@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <base href='/'>
+    <meta charset="utf-8">
+    <title>Mean Final</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="angular-cookies/angular-cookies.js"></script>
+    <script src="assets/app.js"></script>
+    <script src="assets/factories/masterFactory.js"></script>
+    <!-- <script src="assets/factories/productsFactory.js"></script> -->
+    <!-- <script src="assets/factories/ordersFactory.js"></script> -->
+    <script src="assets/controllers/WelcomeController.js"></script>
+    <script src="assets/controllers/QuestionController.js"></script>
+    <script src="assets/controllers/IndexController.js"></script>
+    <script src="assets/controllers/LogoutController.js"></script>
+    <script src="assets/controllers/ViewController.js"></script>
+  </head>
+  <body>
+      <!-- <p><a href="/">Dashboard</a> | <a href="/products">Products</a> | <a href="/orders">Orders</a> | <a href="/customers">Customers</a> | <a href="/settings">Settings</a> </div> -->
+    <div ng-view></div>
+  </body>
+</html>

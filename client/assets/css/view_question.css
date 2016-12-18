@@ -1,0 +1,31 @@
+span{
+  font-weight: bold;
+}
+
+.header{
+  margin-bottom: 10px;
+}
+
+#logout{
+  margin-left: 200px;
+}
+
+.answers{
+  width: 615px;
+  padding: 5px;
+}
+
+.answer_details{
+  vertical-align: top;
+  display: inline-block;
+}
+
+#answer_information{
+  padding: 2px;
+  width: 500px;
+}
+
+#likes{
+  padding: 2px;
+  width: 100px;
+}

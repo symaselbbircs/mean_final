@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="assets/css/new_question.css">
+<link rel="stylesheet" href="assets/css/forms.css">
+<div id="main">
+  <div class = "header">
+    <a href="/welcome">Home</a><a id="logout" href="/logout">Logout</a>
+  </div>
+  <h1>&nbsp;&nbsp;&nbsp;New Question</h1>
+  <form ng-submit="qCtrl.addQuestion(question)" class="page_forms">
+    <p><label><span>Question:</span><textarea ng-model="question.question" rows="8" cols="50"></textarea></label></p>
+    <p><label><span>Description(optional):</span><textarea ng-model="question.description" rows="8" cols="50"></textarea></label></p>
+    <p><label><input type="submit" value="Submit"></label></p>
+  </form>
+  <p class="error" ng-if="error">{{error}}</p>
+</div>

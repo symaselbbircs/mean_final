@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="assets/css/view_question.css">
+<div id="main">
+  <div class = "header">
+    <a href="/welcome">Home</a> | <a href="/question/{{question._id}}/new_answer">Answer this Question</a><a id="logout" href="/logout">Logout</a>
+  </div>
+  <h2>{{question.question}}</h1>
+  <h5 ng-if="question.description">{{question.description}}</h4>
+  <div ng-repeat="answer in question.answers | orderBy: '-likes'" class="answers">
+    <div class="answer_details" id="answer_information">
+      <p>{{answer.name}}</p>
+      <p><span>{{answer.answer}}</span></p>
+      <p>{{answer.description}}</p>
+    </div>
+    <div class="answer_details" id="likes">
+      {{answer.likes}} likes <button ng-click="vCtrl.addLike(answer._id,answer.likes)">Like!</button>
+    </div>
+  </div>
+  <div ng-if="question.answers == false">
+    <p>No one has answered this question yet!</p>
+  </div>
+</div>

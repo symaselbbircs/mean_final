@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="assets/css/forms.css">
+<link rel="stylesheet" href="assets/css/new_answer.css">
+<div id="main">
+  <div class = "header">
+    <a href="/welcome">Home</a> | <a href="/question/{{question._id}}">Go Back to Question</a><a id="logout" href="/logout">Logout</a>
+  </div>
+  <div id="question">
+    <h3>{{question.question}}</h3>
+    <h5>{{question.description}}</h5>
+    <form ng-submit="vCtrl.addAnswer(answer)" class="page_forms">
+      <p><label><span>Your Answer:</span><textarea ng-model="answer.answer" rows="8" cols="50"></textarea></label></p>
+      <p><label><span>Supporting details (optional):</span><textarea ng-model="answer.description" rows="8" cols="50"></textarea></label></p>
+      <p><label><input type="submit" value="Submit"></label></p>
+    </form>
+  </div>
+</div>

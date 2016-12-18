@@ -1,0 +1,12 @@
+.header h1{
+  display: inline-block;
+  }
+  .header a{
+    margin-left: 400px;
+  }
+
+
+#search{
+  margin-left: 419px;
+  margin-bottom: 5px;
+}

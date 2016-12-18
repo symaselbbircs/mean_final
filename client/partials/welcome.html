@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="assets/css/tables.css">
+<link rel="stylesheet" href="assets/css/welcome.css">
+
+<div id="main">
+  <div class = "header">
+  <h1>Hi {{name}}!</h1><a href="/logout">Logout</a>
+</div><br>
+  <a href="/new_question">Add a Question</a>
+  <div id="search">
+    Search: <input type="text" placeholder="search..." ng-model="searchQ">
+  </div>
+  <table>
+    <tr>
+      <th>Question</th>
+      <th>Answers</th>
+      <th>Action</th>
+    </tr>
+    <tr ng-repeat="question in questions | filter:searchQ">
+      <td>{{question.question}}</td>
+      <td>{{question.answers.length}}</td>
+      <td><a href="/question/{{question._id}}">Show</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/question/{{question._id}}/new_answer">Answer</a></td>
+    </tr>
+    <tr ng-repeat="customer in customers | filter:searchName">
+      <td>{{ customer.name }}</td>
+      <td>{{ customer.updated_at | date: 'MMMM dd yyyy'}}</td>
+      <td><button type="button" ng-click="cCtrl.removeUser(customer._id)">Delete</button></td>
+    </tr>
+  </table>
+
+
+</div>
